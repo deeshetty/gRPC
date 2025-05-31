@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package hello;
+
+service HelloService {
+    rpc SayHello(HelloRequest) returns (HelloResponse);
+    rpc SayHelloServerStream(HelloRequest) returns (stream HelloResponse);
+    rpc sayHelloClientStream(stream HelloRequest) returns (HelloResponse);
+    rpc sayHelloBidirectional(stream HelloRequest) returns (stream HelloResponse);
+}
+
+message HelloRequest {
+    string name = 1;
+}
+
+message HelloResponse {
+    string message = 1;
+}
