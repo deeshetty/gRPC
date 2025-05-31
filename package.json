@@ -1,0 +1,15 @@
+{
+  "name": "grpc-node-streaming-examples",
+  "version": "1.0.0",
+  "description": "Examples of all gRPC streaming types in Node.js with modular handlers",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "client": "node client.js"
+  },
+  "author": "deeshetty",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.13.2",
+    "@grpc/proto-loader": "^0.7.13"
+  }
+}
